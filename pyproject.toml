@@ -1,0 +1,32 @@
+[project]
+name = "course-work-2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Станислав Степаненко",email = "ronin999@list.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.32.4,<3.0.0)",
+    "pandas (>=2.3.1,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "course_work_2", from = "src"}]
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.3.0"
+black = "^25.1.0"
+mypy = "^1.16.1"
+isort = "^6.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
